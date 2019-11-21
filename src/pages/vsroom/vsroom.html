@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>vsroom</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item >
+    <ion-label> เลือกห้องเช่า </ion-label>
+      <ion-label></ion-label>
+      <ion-select [(ngModel)]="result.room1"  >
+        <ion-option *ngFor="let get of value" value={{get.name_rentedroom}}>{{get.name_rentedroom}}</ion-option> 
+      </ion-select>
+    </ion-item>
+    <ion-note>กับ</ion-note>
+  
+    <ion-item>
+  <ion-label>เลือกห้องเช่า</ion-label>
+ 
+      <ion-label></ion-label>
+      <ion-select [(ngModel)]="result.room2"  >
+        <ion-option *ngFor="let get of value" value={{get.name_rentedroom}}>{{get.name_rentedroom}}</ion-option> 
+      </ion-select>
+    </ion-item>
+    <button ion-button (click)="getRoomview(get)">เปรียบเทียบ</button>
+
+    <ion-card>
+      <ion-card-content *ngFor="let show of showroom1">
+        <p><b>ชื่อห้องเช่า</b>{{show.name_rentedroom}}</p>
+        <p><b>ราคา THB</b>{{show.price}}</p>
+        <p><b>ที่อยู่</b>{{show.name_type}}</p>
+        <p><b>ประเภทห้องเช่า</b>{{show.name_type}}</p>
+        <p><b>เบอร์โทร</b>{{show.phone_rentedroom}}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content *ngFor="let show of showroom2">
+          <p><b>ชื่อห้องเช่า</b>{{show.name_rentedroom}}</p>
+          <p><b>ราคา THB</b>{{show.price}}</p>
+          <p><b>ที่อยู่</b>{{show.name_type}}</p>
+          <p><b>ประเภทห้องเช่า</b>{{show.name_type}}</p>
+          <p><b>เบอร์โทร</b>{{show.phone_rentedroom}}</p>
+        </ion-card-content>
+      </ion-card>
+
+
+
+</ion-content>

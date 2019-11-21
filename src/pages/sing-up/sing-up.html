@@ -1,0 +1,38 @@
+<!--
+  Generated template for the SingUpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>สร้างบัญชีผู้ใช้</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+        <ion-item>
+          <ion-input placeholder="ชื่อ" [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="นามสกุล" [(ngModel)]="sname"></ion-input>
+        </ion-item>
+
+
+    <ion-item>
+        <ion-input placeholder="อีเมล" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-input placeholder="รหัสผ่าน" [(ngModel)]="password"></ion-input>
+        </ion-item>
+    
+        <button ion-button round full (click)="SingUp"> ลงทะเบียน </button>
+        <button ion-button round full (click)="SingIn"> เข้าสู่ระบบ </button>
+        <button ion-button round full (click)="Cancel"> ยกเลิก </button>
+
+</ion-content>

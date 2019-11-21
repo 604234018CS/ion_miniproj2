@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="Warning">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>ลงชื่อผู้ใช้</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item >
+    <ion-input placeholder="อีเมล" [(ngModel)]="logindata.username"></ion-input>
+</ion-item>
+<ion-item >
+    <ion-input placeholder="รหัสผ่าน" [(ngModel)]="logindata.passwort"></ion-input>
+</ion-item>
+
+  
+         <button ion-button round full (click)="SingIn()"> เข้าสู่ระบบ </button>
+         <button ion-button round full color="light" (click)="SingUp()"> สร้างบัญชีผู้ใช้ </button>
+
+        
+</ion-content>

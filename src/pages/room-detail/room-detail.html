@@ -1,0 +1,37 @@
+<!--
+  Generated template for the RoomDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>RoomDetail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <ion-card-header>
+        <ion-thumbnail item-left>
+            <img src="assets/imgs/{{roomdata.id_picture}}.jpg">
+        </ion-thumbnail>
+    </ion-card-header>
+    <ion-card-content>
+      <p>ชื่อห้องพัก:{{roomdata.name_rentedroom}}</p>
+      <p>ที่อยู่:{{roomdata.address_rentedroom}}</p>
+      <p>ราคา:{{roomdata.price}}</p>
+      <p>สิ่งอำนวยความสะดวก:{{roomdata.facilities}}</p>
+      <p>ประเภทห้องเช่า:{{roomdata.name_type}}</p>
+      <p>จำกัดเพศของผู้เช่า:{{roomdata.restrict_gender}}</p>
+      <p>เบอร์ติดต่อ:{{roomdata.phone_rentedroom}}</p>
+      </ion-card-content>
+
+      <ion-fab right bottom>
+          <button ion-fab color="secondary"><ion-icon name="arrow-dropleft"></ion-icon></button>
+          <ion-fab-list side="left">
+            <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+          </ion-fab-list>
+        </ion-fab>
+  
+</ion-content>
